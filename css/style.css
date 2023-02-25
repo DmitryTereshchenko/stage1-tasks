@@ -19,6 +19,7 @@ body {
   background: url("../assets/img/bg.jpg") center/cover, rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
   transition: background-image 1s ease-in-out;
+  transition-delay: 300ms;
 }
 
 .header {
@@ -130,7 +131,14 @@ body {
 }
 
 .weather-error {
-  margin-top: -10px;
+  margin-top: 10px;
+  display: none;
+  font-size: 16px;
+  color: red;
+}
+
+.weather-error.show {
+  display: inline-block;
 }
 
 .description-container {
@@ -156,6 +164,10 @@ body {
   outline: 0;
   border-bottom: 1px solid #fff;
   background-color: transparent;
+}
+
+.city.error {
+  border-bottom-color: red;
 }
 
 .city::placeholder {  
